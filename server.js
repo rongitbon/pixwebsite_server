@@ -46,6 +46,6 @@ app.post('/addcard', (req, res) => {card.handleAddcard(req, res, db)});
 app.put('/updatecard', (req, res) => {card.handleUpdatecard(req, res, db)});
 app.delete('/deletecard', (req,res) => {card.handleDeletecard(req, res, db)});
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log('app is running on port 3001')
 })
